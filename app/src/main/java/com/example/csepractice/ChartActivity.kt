@@ -1,7 +1,6 @@
 package com.example.csepractice
 
 import android.os.Bundle
-import android.graphics.Color
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -22,6 +21,8 @@ import com.github.mikephil.charting.data.LineDataSet
 import com.example.csepractice.data.PracticeSession
 import com.example.csepractice.repository.QuestionRepository
 import kotlinx.coroutines.flow.Flow
+import android.content.Context
+import android.graphics.Color
 
 class ChartActivity : ComponentActivity() {
     private val repository by lazy { QuestionRepository(applicationContext) }
@@ -29,8 +30,10 @@ class ChartActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        val prefs = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+        val isDarkMode = prefs.getBoolean("dark_mode", false)
         setContent {
-            CSEPracticeAppTheme {
+            CSEPracticeAppTheme(darkTheme = isDarkMode) {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     ScoreChartScreen(modifier = Modifier.padding(innerPadding), sessions = repository.getAllSessions())
                 }

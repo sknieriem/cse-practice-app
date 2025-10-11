@@ -183,6 +183,7 @@
 
 package com.example.csepractice
 
+import android.content.Context // Add this import
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -245,8 +246,10 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        val prefs = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+        val isDarkMode = prefs.getBoolean("dark_mode", false)  // Default to light mode
         setContent {
-            CSEPracticeAppTheme {
+            CSEPracticeAppTheme(darkTheme = isDarkMode) {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     PracticeScreen(Modifier.padding(innerPadding))
                 }

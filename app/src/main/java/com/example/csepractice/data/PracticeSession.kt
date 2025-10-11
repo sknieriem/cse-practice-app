@@ -11,3 +11,4 @@ data class PracticeSession(
     val correctCount: Int,
     val totalQuestions: Int
 )
+
