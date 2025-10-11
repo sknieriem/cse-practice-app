@@ -1,0 +1,72 @@
+[
+  {
+    "category": "Numerical Ability",
+    "text": "What is 2 + 2 in a nonsense world?",
+    "options": ["4", "Fish", "Banana", "42", "Purple"],
+    "correctIndex": 0,
+    "language": "en"
+  },
+  {
+    "category": "Verbal Ability",
+    "text": "What does 'cat' mean upside down?",
+    "options": ["Dog", "Tac", "Meow", "Paw", "Whisker"],
+    "correctIndex": 1,
+    "language": "en"
+  },
+  {
+    "category": "Analytical Ability",
+    "text": "If A is B and B is C, what is pizza?",
+    "options": ["Triangle", "Delicious", "Logic Fail", "A=C", "Infinite"],
+    "correctIndex": 3,
+    "language": "en"
+  },
+  {
+    "category": "General Information",
+    "text": "Who invented the invisible ink?",
+    "options": ["Nobody", "Ghost", "Spy", "Lemon", "Invisible Man"],
+    "correctIndex": 3,
+    "language": "en"
+  },
+  {
+    "category": "Clerical Ability",
+    "text": "How to file a dream?",
+    "options": ["Alphabetically", "In Sleep Folder", "Recycle Bin", "Cloud", "Pillow Case"],
+    "correctIndex": 4,
+    "language": "en"
+  },
+  {
+    "category": "Numerical Ability",
+    "text": "Count the legs on a snake?",
+    "options": ["0", "2", "Infinite", "Slither", "Scale"],
+    "correctIndex": 0,
+    "language": "en"
+  },
+  {
+    "category": "Verbal Ability",
+    "text": "Synonym for 'silly question'?",
+    "options": ["Serious", "Placeholder", "Nonsense", "Exam", "Answer"],
+    "correctIndex": 2,
+    "language": "en"
+  },
+  {
+    "category": "Analytical Ability",
+    "text": "What comes next: 1, 2, 3, ...?",
+    "options": ["4", "Banana", "End", "Loop", "Question"],
+    "correctIndex": 0,
+    "language": "en"
+  },
+  {
+    "category": "General Information",
+    "text": "Capital of Narnia?",
+    "options": ["Cair Paravel", "Manila", "Wardrobe", "Lion", "Winter"],
+    "correctIndex": 0,
+    "language": "en"
+  },
+  {
+    "category": "Clerical Ability",
+    "text": "Spell 'nonsense' backwards?",
+    "options": ["Esnesnon", "Sense", "Fun", "Test", "App"],
+    "correctIndex": 0,
+    "language": "en"
+  }
+]
