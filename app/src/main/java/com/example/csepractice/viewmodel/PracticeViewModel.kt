@@ -9,6 +9,8 @@ import com.example.csepractice.repository.QuestionRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 
 class PracticeViewModel(application: Application) : AndroidViewModel(application) {
@@ -28,6 +30,10 @@ class PracticeViewModel(application: Application) : AndroidViewModel(application
 
     val sessions: Flow<List<PracticeSession>> = repository.getAllSessions()
 
+    val averageScore: Flow<Double> = sessions.map { sessionList ->
+        if (sessionList.isEmpty()) 0.0 else sessionList.map { it.score }.average()
+    }
+
     init {
         viewModelScope.launch {
             repository.seedQuestionsIfEmpty()
@@ -35,9 +41,11 @@ class PracticeViewModel(application: Application) : AndroidViewModel(application
         }
     }
 
-    private suspend fun loadQuestions() {
-        repository.getRandomQuestions(10).collect { qs ->
-            _questions.value = qs
+    private fun loadQuestions() {
+        viewModelScope.launch {
+            repository.getRandomQuestions(10).collect { qs ->
+                _questions.value = qs
+            }
         }
     }
 
