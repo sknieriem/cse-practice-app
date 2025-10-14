@@ -12,10 +12,18 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.Button
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.RadioButton
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -30,8 +38,10 @@ import com.example.csepractice.ui.theme.CSEPracticeAppTheme
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import android.widget.Toast  // For feedback
+import android.widget.Toast
+
 class SettingsActivity : ComponentActivity() {
+    @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -39,7 +49,21 @@ class SettingsActivity : ComponentActivity() {
         val isDarkMode = prefs.getBoolean("dark_mode", false)
         setContent {
             CSEPracticeAppTheme(darkTheme = isDarkMode) {
-                SettingsScreen()
+                Scaffold(
+                    modifier = Modifier.fillMaxSize(),
+                    topBar = {
+                        TopAppBar(
+                            title = { Text("Settings") },
+                            navigationIcon = {
+                                IconButton(onClick = { finish() }) {
+                                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                                }
+                            }
+                        )
+                    }
+                ) { innerPadding ->
+                    SettingsScreen(modifier = Modifier.padding(innerPadding))
+                }
             }
         }
     }
@@ -50,6 +74,7 @@ fun SettingsScreen(modifier: Modifier = Modifier) {
     val context = LocalContext.current
     val prefs = context.getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
     var isDarkMode by remember { mutableStateOf(prefs.getBoolean("dark_mode", false)) }
+    var colorScheme by remember { mutableStateOf(prefs.getString("color_scheme", "Default") ?: "Default") }
 
     Column(
         modifier = modifier.fillMaxSize().padding(16.dp),
@@ -70,9 +95,23 @@ fun SettingsScreen(modifier: Modifier = Modifier) {
                         putBoolean("dark_mode", enabled)
                         apply()
                     }
-                    // Note: Restart the app to see changes (or recreate activities)
                 }
             )
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+        Text("Color Scheme:")
+        Row {
+            listOf("Default", "Blue", "Green").forEach { scheme ->
+                RadioButton(selected = colorScheme == scheme, onClick = {
+                    colorScheme = scheme
+                    with(prefs.edit()) {
+                        putString("color_scheme", scheme)
+                        apply()
+                    }
+                })
+                Text(scheme)
+            }
         }
 
         Spacer(modifier = Modifier.height(32.dp))

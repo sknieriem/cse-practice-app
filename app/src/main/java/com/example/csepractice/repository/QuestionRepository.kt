@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.firstOrNull
 
 class QuestionRepository(private val context: Context) {
-    private val dao = AppDatabase.getDatabase(context).questionDao()
+    val dao = AppDatabase.getDatabase(context).questionDao()
 
     fun getRandomQuestionsByCategories(categories: List<String>, count: Int): Flow<List<Question>> =
         dao.getRandomQuestionsByCategories(categories, count)

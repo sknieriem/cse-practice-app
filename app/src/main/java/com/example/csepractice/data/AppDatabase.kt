@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
-@Database(entities = [Question::class, PracticeSession::class], version = 4, exportSchema = true)
+@Database(entities = [Question::class, PracticeSession::class], version = 5, exportSchema = true)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun questionDao(): QuestionDao
 
@@ -21,7 +21,7 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "cse_database"
-                ).addMigrations(MIGRATION_1_2, MIGRATION_2_3, MIGRATION_3_4)
+                ).addMigrations(MIGRATION_1_2, MIGRATION_2_3, MIGRATION_3_4, MIGRATION_4_5)
                     .fallbackToDestructiveMigration()  // For dev, removes data on mismatch
                     .build()
                 INSTANCE = instance
@@ -104,6 +104,52 @@ abstract class AppDatabase : RoomDatabase() {
         val MIGRATION_3_4 = object : Migration(3, 4) {
             override fun migrate(database: SupportSQLiteDatabase) {
                 // Empty migration to force version bump and fallback if needed
+            }
+        }
+
+        val MIGRATION_4_5 = object : Migration(4, 5) {
+            override fun migrate(database: SupportSQLiteDatabase) {
+                // Check if 'difficulty' exists
+                val cursor = database.query("PRAGMA table_info(questions)")
+                var hasDifficulty = false
+                val nameIndex = cursor.getColumnIndex("name")
+                if (cursor.moveToFirst()) {
+                    do {
+                        if (nameIndex >= 0 && cursor.getString(nameIndex) == "difficulty") {
+                            hasDifficulty = true
+                            break
+                        }
+                    } while (cursor.moveToNext())
+                }
+                cursor.close()
+
+                if (hasDifficulty) {
+                    // Create temp table with current schema (no difficulty)
+                    database.execSQL("""
+                        CREATE TABLE questions_temp (
+                            id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                            text TEXT NOT NULL DEFAULT '',
+                            optionA TEXT NOT NULL DEFAULT '',
+                            optionB TEXT NOT NULL DEFAULT '',
+                            optionC TEXT NOT NULL DEFAULT '',
+                            optionD TEXT NOT NULL DEFAULT '',
+                            correctAnswer TEXT NOT NULL DEFAULT '',
+                            category TEXT NOT NULL DEFAULT ''
+                        )
+                    """.trimIndent())
+
+                    // Copy data, excluding difficulty
+                    database.execSQL("""
+                        INSERT INTO questions_temp (id, text, optionA, optionB, optionC, optionD, correctAnswer, category)
+                        SELECT id, text, optionA, optionB, optionC, optionD, correctAnswer, category FROM questions
+                    """.trimIndent())
+
+                    // Drop old table
+                    database.execSQL("DROP TABLE questions")
+
+                    // Rename temp to original
+                    database.execSQL("ALTER TABLE questions_temp RENAME TO questions")
+                }
             }
         }
     }

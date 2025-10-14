@@ -718,5 +718,455 @@
     "optionD": "200 fixed",
     "correctAnswer": "A",
     "category": "General Information"
+  },
+  {
+    "text": "Every Christian's path is beset by peril.",
+    "optionA": "bested",
+    "optionB": "frightened",
+    "optionC": "surrounded",
+    "optionD": "chased",
+    "correctAnswer": "C",
+    "category": "Verbal Ability"
+  },
+  {
+    "text": "The power failure at 8 P.M. caused consternation among the barangay's residents.",
+    "optionA": "dismay",
+    "optionB": "deliberation",
+    "optionC": "disability",
+    "optionD": "distaste",
+    "correctAnswer": "A",
+    "category": "Verbal Ability"
+  },
+  {
+    "text": "The consensus among the congressmen was that the bill would not be passed.",
+    "optionA": "divided",
+    "optionB": "controversy",
+    "optionC": "gathering",
+    "optionD": "agreement",
+    "correctAnswer": "D",
+    "category": "Verbal Ability"
+  },
+  {
+    "text": "Tempestuous times preceded the EDSA People Power Revolution.",
+    "optionA": "emotionally charged",
+    "optionB": "temperate",
+    "optionC": "trying",
+    "optionD": "peaceful",
+    "correctAnswer": "A",
+    "category": "Verbal Ability"
+  },
+  {
+    "text": "Imelda Marcos was known for her ostentatious extravagance.",
+    "optionA": "oscillating",
+    "optionB": "loud",
+    "optionC": "wealthy",
+    "optionD": "showy",
+    "correctAnswer": "D",
+    "category": "Verbal Ability"
+  },
+  {
+    "text": "Some believe that the treatment for modern-day depression is complete abstinence from social media use.",
+    "optionA": "absence",
+    "optionB": "avoidance",
+    "optionC": "sickness",
+    "optionD": "prescription",
+    "correctAnswer": "B",
+    "category": "Verbal Ability"
+  },
+  {
+    "text": "Mary Grace Cafe is a favorite rendezvous for all the titas of Manila.",
+    "optionA": "hidden retreat",
+    "optionB": "hiding place",
+    "optionC": "meeting place",
+    "optionD": "dining room",
+    "correctAnswer": "C",
+    "category": "Verbal Ability"
+  },
+  {
+    "text": "Lola Mona Lisa is so old that her health has regressed to the point that she may die any time soon.",
+    "optionA": "remembered",
+    "optionB": "alluded",
+    "optionC": "deteriorated",
+    "optionD": "progressed",
+    "correctAnswer": "C",
+    "category": "Verbal Ability"
+  },
+  {
+    "text": "The garrulous taxi driver annoyed most of his passengers especially the introverted ones.",
+    "optionA": "talkative",
+    "optionB": "gracious",
+    "optionC": "sickly",
+    "optionD": "grey",
+    "correctAnswer": "A",
+    "category": "Verbal Ability"
+  },
+  {
+    "text": "A less scrupulous plumber could easily have unnecessarily replaced the drainpipes and run up the cost.",
+    "optionA": "afraid",
+    "optionB": "employed",
+    "optionC": "careful",
+    "optionD": "infamous",
+    "correctAnswer": "C",
+    "category": "Verbal Ability"
+  },
+  {
+    "text": "What is the main topic of the passage? (Mental health awareness)",
+    "optionA": "Mental Health Awareness Efforts",
+    "optionB": "Government Initiatives in the Philippines",
+    "optionC": "Challenges in Mental Health Support",
+    "optionD": "Importance of Mental Health",
+    "correctAnswer": "A",
+    "category": "Verbal Ability"
+  },
+  {
+    "text": "Which legislation is mentioned in the passage?",
+    "optionA": "Healthcare Act",
+    "optionB": "Education Act",
+    "optionC": "Mental Health Act",
+    "optionD": "Social Services Act",
+    "correctAnswer": "C",
+    "category": "Verbal Ability"
+  },
+  {
+    "text": "What is the main topic of the passage? (Climate change)",
+    "optionA": "Environmental Challenges",
+    "optionB": "Government Policies",
+    "optionC": "Climate Change",
+    "optionD": "Renewable Energy",
+    "correctAnswer": "C",
+    "category": "Verbal Ability"
+  },
+  {
+    "text": "Convert 310/50 to a decimal.",
+    "optionA": "6.2",
+    "optionB": "3.1",
+    "optionC": "0.62",
+    "optionD": "6.1",
+    "correctAnswer": "A",
+    "category": "Numerical Ability"
+  },
+  {
+    "text": "2/5 + 1/4 = ?",
+    "optionA": "9/20",
+    "optionB": "13/20",
+    "optionC": "7/20",
+    "optionD": "11/20",
+    "correctAnswer": "B",
+    "category": "Numerical Ability"
+  },
+  {
+    "text": "Given the equation 3x + 6 = 15, what is the value of x?",
+    "optionA": "3",
+    "optionB": "4",
+    "optionC": "5",
+    "optionD": "6",
+    "correctAnswer": "A",
+    "category": "Numerical Ability"
+  },
+  {
+    "text": "What is the next number in the sequence: 2, 4, 8, 16, 32, ?",
+    "optionA": "48",
+    "optionB": "54",
+    "optionC": "64",
+    "optionD": "72",
+    "correctAnswer": "C",
+    "category": "Numerical Ability"
+  },
+  {
+    "text": "What is the next number in the sequence: 5, 10, 20, 40, ?",
+    "optionA": "60",
+    "optionB": "70",
+    "optionC": "80",
+    "optionD": "100",
+    "correctAnswer": "C",
+    "category": "Numerical Ability"
+  },
+  {
+    "text": "What is the next number in the sequence: 3, 6, 12, 24, ?",
+    "optionA": "36",
+    "optionB": "48",
+    "optionC": "54",
+    "optionD": "60",
+    "correctAnswer": "B",
+    "category": "Numerical Ability"
+  },
+  {
+    "text": "What is the next number in the sequence: 1, 4, 9, 16, 25, ?",
+    "optionA": "30",
+    "optionB": "36",
+    "optionC": "42",
+    "optionD": "49",
+    "correctAnswer": "B",
+    "category": "Numerical Ability"
+  },
+  {
+    "text": "What is the next number in the sequence: 2, 3, 5, 7, 11, ?",
+    "optionA": "13",
+    "optionB": "14",
+    "optionC": "15",
+    "optionD": "17",
+    "correctAnswer": "A",
+    "category": "Numerical Ability"
+  },
+  {
+    "text": "What is the next number in the sequence: 8, 16, 24, 32, 40, ?",
+    "optionA": "45",
+    "optionB": "48",
+    "optionC": "50",
+    "optionD": "52",
+    "correctAnswer": "B",
+    "category": "Numerical Ability"
+  },
+  {
+    "text": "What is the next number in the sequence: 1, 1, 2, 3, 5, 8, ?",
+    "optionA": "10",
+    "optionB": "11",
+    "optionC": "12",
+    "optionD": "13",
+    "correctAnswer": "D",
+    "category": "Numerical Ability"
+  },
+  {
+    "text": "What is the next number in the sequence: 9, 27, 81, 243, ?",
+    "optionA": "324",
+    "optionB": "567",
+    "optionC": "729",
+    "optionD": "810",
+    "correctAnswer": "C",
+    "category": "Numerical Ability"
+  },
+  {
+    "text": "What is the next number in the sequence: 10, 20, 30, 40, ?",
+    "optionA": "45",
+    "optionB": "50",
+    "optionC": "55",
+    "optionD": "60",
+    "correctAnswer": "B",
+    "category": "Numerical Ability"
+  },
+  {
+    "text": "ODOMETER : MILEAGE :: COMPASS :",
+    "optionA": "SPEED",
+    "optionB": "HIKING",
+    "optionC": "NEEDLE",
+    "optionD": "DIRECTION",
+    "correctAnswer": "D",
+    "category": "Analytical Ability"
+  },
+  {
+    "text": "If it is rainy tomorrow, I will not visit my friend’s house. If I will visit my friend’s house, then ___________________",
+    "optionA": "tomorrow is rainy",
+    "optionB": "tomorrow is not rainy",
+    "optionC": "it will rain later",
+    "optionD": "I will stay home",
+    "correctAnswer": "B",
+    "category": "Analytical Ability"
+  },
+  {
+    "text": "Only confident people are actors. All actors are wealthy. Ben is wealthy. Is 'Ben is a confident person' undoubtedly true?",
+    "optionA": "Yes",
+    "optionB": "No",
+    "optionC": "Maybe",
+    "optionD": "Always",
+    "correctAnswer": "B",
+    "category": "Analytical Ability"
+  },
+  {
+    "text": "What is the next number in the sequence: 1, 4, 7, 10, 13?",
+    "optionA": "15",
+    "optionB": "16",
+    "optionC": "14",
+    "optionD": "17",
+    "correctAnswer": "B",
+    "category": "Analytical Ability"
+  },
+  {
+    "text": "If A then B, If B then C. Therefore, If A then C. Is this true?",
+    "optionA": "Yes (Hypothetical Syllogism)",
+    "optionB": "No",
+    "optionC": "Only if A is true",
+    "optionD": "Depends on C",
+    "correctAnswer": "A",
+    "category": "Analytical Ability"
+  },
+  {
+    "text": "Big : Large :: Small :",
+    "optionA": "Tiny",
+    "optionB": "Huge",
+    "optionC": "Medium",
+    "optionD": "Wide",
+    "correctAnswer": "A",
+    "category": "Analytical Ability"
+  },
+  {
+    "text": "Opaque : Clear :: Fancy :",
+    "optionA": "Simple",
+    "optionB": "Complex",
+    "optionC": "Elegant",
+    "optionD": "Plain",
+    "correctAnswer": "A",
+    "category": "Analytical Ability"
+  },
+  {
+    "text": "Length : Meters :: Electric Current :",
+    "optionA": "Volts",
+    "optionB": "Amperes",
+    "optionC": "Ohms",
+    "optionD": "Watts",
+    "correctAnswer": "B",
+    "category": "Analytical Ability"
+  },
+  {
+    "text": "Chef : Cook :: Dancer :",
+    "optionA": "Perform",
+    "optionB": "Dance",
+    "optionC": "Teach",
+    "optionD": "Watch",
+    "correctAnswer": "A",
+    "category": "Analytical Ability"
+  },
+  {
+    "text": "In a data interpretation graph showing sales: Jan 100, Feb 150, Mar 120. What is the average?",
+    "optionA": "123.33",
+    "optionB": "120",
+    "optionC": "130",
+    "optionD": "125",
+    "correctAnswer": "A",
+    "category": "Analytical Ability"
+  },
+  {
+    "text": "Negligent: requirement: remiss: _____________.",
+    "optionA": "duty",
+    "optionB": "law",
+    "optionC": "task",
+    "optionD": "care",
+    "correctAnswer": "A",
+    "category": "Analytical Ability"
+  },
+  {
+    "text": "Politician: statesman: ______________: ______________. ",
+    "optionA": "lawyer: advocate",
+    "optionB": "doctor: physician",
+    "optionC": "teacher: educator",
+    "optionD": "soldier: warrior",
+    "correctAnswer": "D",
+    "category": "Analytical Ability"
+  },
+  {
+    "text": "Caution is to ________ as radar is to ________.",
+    "optionA": "signal: wave",
+    "optionB": "warning: detection",
+    "optionC": "care: speed",
+    "optionD": "alert: track",
+    "correctAnswer": "B",
+    "category": "Analytical Ability"
+  },
+  {
+    "text": "What are the 3 main branches of the Government of the Philippines?",
+    "optionA": "Senate, Supreme Court, Congress",
+    "optionB": "Presidential, Unicameral-Parliamentary, Bicameral-Parliamentary",
+    "optionC": "Legislative, Executive, Judicial",
+    "optionD": "The Legislature, The Senate, The Supreme Court",
+    "correctAnswer": "C",
+    "category": "General Information"
+  },
+  {
+    "text": "The Supreme Court shall be composed of a Chief Justice and how many Associates Justices?",
+    "optionA": "12",
+    "optionB": "13",
+    "optionC": "14",
+    "optionD": "15",
+    "correctAnswer": "D",
+    "category": "General Information"
+  },
+  {
+    "text": "The Commander-in-Chief of all armed forces of the Philippines in 2025 is _________.",
+    "optionA": "Air Force Commanding General Jeffrey Delgado",
+    "optionB": "Ferdinand Marcos Jr.",
+    "optionC": "Chief Justice Maria Lourdes Sereno",
+    "optionD": "AFP Chief Lieutenant Gen. Emmanuel Bautista",
+    "correctAnswer": "B",
+    "category": "General Information"
+  },
+  {
+    "text": "The executive power shall be vested in the _________.",
+    "optionA": "President of the Philippines",
+    "optionB": "House of Representatives",
+    "optionC": "The Supreme Court",
+    "optionD": "The Congress",
+    "correctAnswer": "A",
+    "category": "General Information"
+  },
+  {
+    "text": "The legislative power shall be vested in the _________ which shall consist of a Senate and a House of Representatives.",
+    "optionA": "Congress of the Philippines",
+    "optionB": "House of Ombudsman",
+    "optionC": "The Supreme Court",
+    "optionD": "Bureau of Internal Revenue",
+    "correctAnswer": "A",
+    "category": "General Information"
+  },
+  {
+    "text": "The Senate shall be composed of how many senators elected at large by voters of the Philippines?",
+    "optionA": "21",
+    "optionB": "22",
+    "optionC": "23",
+    "optionD": "24",
+    "correctAnswer": "D",
+    "category": "General Information"
+  },
+  {
+    "text": "How long shall the term of office of the senators be commenced?",
+    "optionA": "3 years",
+    "optionB": "4 years",
+    "optionC": "5 years",
+    "optionD": "6 years",
+    "correctAnswer": "D",
+    "category": "General Information"
+  },
+  {
+    "text": "The term of office of the President and Vice-president of the Philippines shall be up to how many years?",
+    "optionA": "3 years",
+    "optionB": "4 years",
+    "optionC": "5 years",
+    "optionD": "6 years",
+    "correctAnswer": "D",
+    "category": "General Information"
+  },
+  {
+    "text": "The members of the House of Representatives shall be elected for a term of _______.",
+    "optionA": "3 years",
+    "optionB": "4 years",
+    "optionC": "5 years",
+    "optionD": "6 years",
+    "correctAnswer": "A",
+    "category": "General Information"
+  },
+  {
+    "text": "The following shall be exempted from taxation except:",
+    "optionA": "Lands and buildings",
+    "optionB": "Churches and convents",
+    "optionC": "Charitable institutions",
+    "optionD": "Non-profit cemeteries",
+    "correctAnswer": "A",
+    "category": "General Information"
+  },
+  {
+    "text": "The Congress, by a vote of ____ of both Houses in joint session assembled, voting separately, shall have the sole power to declare a state of war.",
+    "optionA": "Two-thirds",
+    "optionB": "One-half",
+    "optionC": "Three quarters",
+    "optionD": "Minority",
+    "correctAnswer": "A",
+    "category": "General Information"
+  },
+  {
+    "text": "It states that “no person shall be deprived of life, liberty, or property without due process of law, nor any person be denied the equal protection of the laws.”",
+    "optionA": "Article VI",
+    "optionB": "Bill of Rights",
+    "optionC": "Republic Act",
+    "optionD": "Court Order",
+    "correctAnswer": "B",
+    "category": "General Information"
   }
 ]

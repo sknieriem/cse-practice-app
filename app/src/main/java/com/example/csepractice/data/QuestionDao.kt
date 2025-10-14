@@ -1,4 +1,3 @@
-// app/src/main/java/com/example/csepractice/data/QuestionDao.kt
 package com.example.csepractice.data
 
 import androidx.room.Dao
@@ -16,6 +15,12 @@ interface QuestionDao {
 
     @Query("SELECT * FROM questions WHERE category IN (:categories) ORDER BY RANDOM() LIMIT :count")
     fun getRandomQuestionsByCategories(categories: List<String>, count: Int): Flow<List<Question>>
+
+    @Query("SELECT DISTINCT category FROM questions")
+    fun getCategories(): Flow<List<String>>  // New for dynamic categories
+
+    @Query("SELECT AVG(score) FROM practice_sessions WHERE categories LIKE '%' || :category || '%'")
+    fun getAvgByCategory(category: String): Flow<Double>  // New for category avg
 
     @Insert
     suspend fun insertQuestions(questions: List<Question>)

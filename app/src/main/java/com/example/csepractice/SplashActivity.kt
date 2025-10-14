@@ -1,4 +1,3 @@
-// app/src/main/java/com/example/csepractice/SplashActivity.kt
 package com.example.csepractice
 
 import android.content.Intent
@@ -61,5 +60,10 @@ fun SplashScreen(onTimeout: () -> Unit) {
             textAlign = TextAlign.Center,
             modifier = Modifier.padding(bottom = 32.dp)
         )
+        Text("Quick Tips:", style = MaterialTheme.typography.titleMedium)
+        Text("1. Practice daily for best results!")
+        Text("2. Focus on weak categories using the button.")
+        Text("3. Review explanations after tests.")
+        Text("4. Aim for 80%+ to pass CSE!")
     }
 }
