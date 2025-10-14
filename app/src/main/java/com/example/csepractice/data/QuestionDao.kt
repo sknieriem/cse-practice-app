@@ -1,3 +1,4 @@
+// app/src/main/java/com/example/csepractice/data/QuestionDao.kt
 package com.example.csepractice.data
 
 import androidx.room.Dao
@@ -9,6 +10,12 @@ import kotlinx.coroutines.flow.Flow
 interface QuestionDao {
     @Query("SELECT * FROM questions ORDER BY RANDOM() LIMIT :count")
     fun getRandomQuestions(count: Int): Flow<List<Question>>
+
+    @Query("SELECT * FROM questions WHERE category = :category ORDER BY RANDOM() LIMIT :count")
+    fun getRandomQuestionsByCategory(category: String, count: Int): Flow<List<Question>>
+
+    @Query("SELECT * FROM questions WHERE category IN (:categories) ORDER BY RANDOM() LIMIT :count")
+    fun getRandomQuestionsByCategories(categories: List<String>, count: Int): Flow<List<Question>>
 
     @Insert
     suspend fun insertQuestions(questions: List<Question>)

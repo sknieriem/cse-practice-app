@@ -1,5 +1,6 @@
 package com.example.csepractice
 
+import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -21,7 +22,6 @@ import com.github.mikephil.charting.data.LineDataSet
 import com.example.csepractice.data.PracticeSession
 import com.example.csepractice.repository.QuestionRepository
 import kotlinx.coroutines.flow.Flow
-import android.content.Context
 import android.graphics.Color
 
 class ChartActivity : ComponentActivity() {
@@ -53,7 +53,7 @@ fun ScoreChartScreen(modifier: Modifier = Modifier, sessions: Flow<List<Practice
             LineChart(ctx).apply {
                 description.text = "Scores Over Time"
                 setTouchEnabled(true)
-                isDragEnabled = true
+                setDragEnabled(true)
                 setScaleEnabled(true)
                 setPinchZoom(true)
             }
