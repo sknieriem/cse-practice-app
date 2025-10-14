@@ -27,7 +27,10 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import com.example.csepractice.repository.QuestionRepository
 import com.example.csepractice.ui.theme.CSEPracticeAppTheme
-
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import android.widget.Toast  // For feedback
 class SettingsActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -76,8 +79,10 @@ fun SettingsScreen(modifier: Modifier = Modifier) {
 
         Button(onClick = {
             val repository = QuestionRepository(context)
-            repository.clearAllSessions()
-            // Optionally, add a Toast: android.widget.Toast.makeText(context, "History reset!", android.widget.Toast.LENGTH_SHORT).show()
+            CoroutineScope(Dispatchers.IO).launch {
+                repository.clearAllSessions()
+            }
+            Toast.makeText(context, "History reset!", Toast.LENGTH_SHORT).show()
         }) {
             Text("Reset Progress History")
         }

@@ -18,4 +18,7 @@ interface QuestionDao {
 
     @Query("SELECT * FROM practice_sessions ORDER BY date DESC")
     fun getAllSessions(): Flow<List<PracticeSession>>
+
+    @Query("DELETE FROM practice_sessions")
+    suspend fun clearAllSessions()
 }
