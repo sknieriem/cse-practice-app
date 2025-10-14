@@ -18,6 +18,10 @@ class QuestionRepository(private val context: Context) {
 
     fun getAllSessions(): Flow<List<PracticeSession>> = dao.getAllSessions()
 
+    suspend fun clearAllSessions() {
+        dao.clearAllSessions()
+    }
+
     suspend fun seedQuestionsIfEmpty() {
         // Check if DB is empty
         val questionsFlow = dao.getRandomQuestions(1)
